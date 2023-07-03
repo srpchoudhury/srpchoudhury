@@ -1,0 +1,1121 @@
+41:)=======================(:41
+===============================
+-It is an open sourse, cross platform library for HTML, CSS and JavaScript.
+-Open source allows to customize according to the client requirements.
+-Library comprises of templets.
+-A templet comprises of predefined design and functionality which you can implement in 
+ your application without re-designing.
+-Bootstrap provides predefined componentes .[Web Components]
+-Component comprises of
+        a.Design in HTML
+        b.Styles in CSS
+        c.Funnctionality in jQuery
+-Components like
+       alerts,navbar,carousel,pagination,accordion,modal etc.
+-Bootstrap provides 
+         HTML markup
+         CSS classes
+         jQuery attributes
+
+setup environment for bootstrap::[version 3.2,4.2,5]
+----------------------------------------------------
+>npm install bootstrap --save
+>npm install bootstrap-icons --save
+>npm install jquery --save
+
+files required for bootstrap components:
+-bootstrap.css
+-bootstrap-icons.css
+-jquery.js
+-bootstrap.bundle.js
+
+Note:Bootstrap uses "Roboto" font.
+                       Bootstrap Container
+                       -------------------
+-container is used to keep all related content together.
+-Bootstrap provides various container classes for various devices.
+         .container        small devices[mobile]
+         .container-lg     large devices[laptop,desktop]
+         .container-md     medium devices[tab]
+         .container-fluid  responsive
+
+             <div class="container">
+
+FAQ:Can we customize bootstrap classes?
+Ans: Yes.
+       <style>
+            .container-fluid {
+                border: 2px solid black;
+           }
+      </style>
+                                 Bootstrap Box Model
+                                ---------------------
+Margins and Paddings:
+--------------------- 
+  .m                 margin
+  .p                 padding
+
+   s                 left
+   e                 right
+   t                 top
+   b                 bottom
+   x                 left and right
+   y                 top and bottom
+
+.ms           left margin
+.ps           left padding
+.mx           margin left and right
+.my           margin top and bottom
+.px           padding left and right
+
+Size for padding and margin can be 1 to 4 values.
+
+.ms-4       margin left 4[400]
+.p-4        padding all directions
+.m-4        margin all direction
+
+syntax:  
+         <p class="mt-3 ml-3 me-3 ms-3 p-4>
+            Yout text
+        </p>
+
+Borders:
+.border               sets border
+.border-size          size can be 1 to 4 -dependency on border
+                      border-1
+                      border-4
+.border-contextual    it sets a predefined contextual colors
+           primary
+           secondary
+           dark  
+           light
+           sucess
+           danger
+           warning
+           info etc.
+syntax:
+       <p class="border border-4 border-primary>
+
+      </p>
+
+Rounded Border:
+.rounded                base class
+.rounded-size           size can be 1 to 3
+.rounded-circle
+.rounded-pill
+
+syntax:
+  <p border border-4 border-primary rounded rounded-pill
+
+ </p>
+42:)----------------------(:42
+==============================
+Contextual colors for text and background
+.text-contextual   [primary,secondary,sucess,danger,warning,info,dark,light]
+.text-primary
+
+.bg-contextual
+.bg-primary,danger,warning,sucess etc.
+
+Bootstrap Display:
+------------------
+.d               display
+.d-flex
+.d-grid
+.d-inline
+.d-none
+.flex-wrap
+.justify-content-center,between
+.d-block
+
+ex:  <div class="container-fluid">
+       <div>
+        <div class="d-flex justify-content-center align-items-center" style="height: 400px">
+            <form action="">
+                <dl>
+                    <dt>User Name</dt>
+                    <dd><input type="text"></dd>
+                    <dt>Password</dt>
+                    <dd><input type="password"></dd>
+                </dl>
+                <button>Login</button>
+            </form>
+        </div>
+       </div>
+    </div>
+
+Bootstrap Rows and Columns:
+---------------------------
+.row           configures a row
+.col           defines a column
+.col-1 to 12   size of column
+
+EX:  <div class="container-fluid">
+        <h2>Product Details</h2>
+        <dl class="row">
+            <dt class="col-3">Name</dt>
+            <dd class="col-9">Samsung TV</dd>
+            <dt class="col-3">Price</dt>
+            <dd class="col-9">5600</dd>
+            <dt class="col-3">Stock</dt>
+            <dd class="col-9">Available</dd>
+        </dl>
+    </div>
+ 
+synatx:
+  <div class="row">
+    <div class="col">
+        single column
+    </div>
+ </div>
+  <div class="row">
+    <div class="col">
+        col-1
+    </div>
+  <div class="col">
+       col-2
+  </div>
+ </div>
+
+Position:
+---------
+.position-static
+.position-absolute
+.position-relative
+.position-fixed
+.position-sticky
+
+.top-0
+.top-50
+.top-100
+
+.start-0
+.start-50
+.start-100
+
+.end-0
+.end-50
+.end-100
+
+.bottom-0
+.bottom-50
+.bottom-100
+
+syntax:         <h2 class="position-sticky top-0 bg-dark text-white>HTML</h2>
+
+Floating:
+---------
+.float-start
+.float-end
+
+Text Alignments
+----------------
+.text-left
+.text-center
+.text-right
+.text-justify
+
+Width and Height
+----------------
+.w-25
+.w-50
+.w-75
+.w-100
+
+.h-25
+.h-50
+.h-75
+.h-100
+
+  ex:       <img class="w-100 h-25">
+            <button class="w-100"></button>
+
+                         Bootstrap Components
+                        ----------------------
+1.Alerts :it will display embeded dialog in page.you can control dynamically.
+   CSS Classes
+      .alert
+      .alert-contextual
+      .alert-text
+      .alert-link
+      .alert-title
+      .alert-dismissible
+
+  jQuery Attributes
+      .data-bs-dismiss  :used to close
+      .data-bs-toggle   :it defines the component to use
+      .data-bs-target   :it defines the ID of reffered component
+      .data-bs-parent   :it defines the parent component
+      
+EX:<div class="container-fluid">
+    <h2>Alerts</h2>
+    <div class="alert alert-danger alert-dismissible">
+        <button class="btn-close" data-bs-dismiss="alert"></button>
+        <h2 class="alert-title">Delete Record</h2>
+        <p class="alert-text"> Selected record will be deleted</p>
+        <a href="#" class="alert-link">Help?</a>
+        <button data-bs-dismiss="alert">OK</button>
+    </div> 
+</div>
+
+2.Buttons
+      .btn               base class
+      .btn-contextual    colors
+      .btn-sm            small
+      .btn-lg            large
+      .btn-outline-contextual
+      .btn-link
+      .btn-close
+      .btn-toolbar
+      .btn-group  
+      .btn-group-vertical       
+
+EX::
+  <div class="container-fluid">
+     <h2>Link Button</h2>
+     <button class="btn btn-link">Sign In</button>
+     <button class="btn-close"></button>
+     <h2>Block Button</h2>
+     <button class="btn btn-dark w-100">Back to top</button>
+    <h2>Button Base Classes</h2>
+     <button class="btn btn-primary">Insert</button>
+     <button class="btn btn-success">Update</button>
+     <button class="btn btn-danger">Delete</button>
+     <h2>Button Outline</h2>
+     <button class="btn btn-outline-primary btn-sm">Insert</button>
+     <button class="btn btn-outline-success">Update</button>
+     <button class="btn btn-outline-danger btn-lg">Delete</button>
+     <h2>Button Group</h2>
+     <div class="btn-group btn-group-vertical">
+     <button class="btn btn-outline-primary">Insert</button>
+     <button class="btn btn-outline-success">Update</button>
+     <button class="btn btn-outline-danger">Delete</button>
+     
+     </div>
+     <h2>Button Toolbar</h2>
+     <div class="btn-toolbar bg-danger justify-content-between">
+       <div class="btn-group">
+   <button class="btn btn-danger"><span class="bi bi-house-door"></span>Home</button>
+   <button class="btn btn-danger">About</button>
+   <button class="btn btn-danger">Contact</button>
+       </div>
+       <div class="btn-group">
+     <button class="btn btn-danger">Login</button>
+     <button class="btn btn-danger">Search</button>
+       </div>
+     </div>
+</div>
+
+43:::::::::::::::::::::::::::::::::::::43
+=========================================
+3.Bootstrap Cards:
+.card
+.card-header
+.card-body
+.card-footer
+.card-title
+.card-subtitle
+.card-text
+.card-img-top
+.card-img-overlay
+
+Note:Card-deck is removed from bootstrap 5.you have to use display flex classes.
+EX:body class="container-fluid">
+    <h2>Todays Deal</h2>
+    <div class="d-flex flex-wrap">
+         <div class="card w-25 m-2">
+             <div class="card-header">
+                 <h2 class="card-title">boAt Ear Bud</h2>
+                 <p class="card-subtitle">50% OFF</p>
+             </div>
+             <div class="card-body">
+                  <img src="../public/images/earbud.png" alt="" class="w-100">
+                  <p class="card-text"> &#8377; 2000</p>
+             </div>
+             <div class="card-footer">
+                    <button class="btn btn-danger w-100">
+                        <span class="bi bi-cart"> Add to Cart</span>
+                    </button>
+             </div>
+         </div>
+      </div>
+  </body>
+                          Bootstrap Modal
+                         -----------------
+-Modal is a dialog.
+-You can turn ON and OFF.
+-Dialog pops up in a page to display message or to handle any interaction. 
+
+.modal
+.modal-header
+.modal-body
+.modal-footer
+.modal-dialog
+.modal-content
+.modal-fullscreen
+.modal-dialog-centered
+.show                       :it is used to ON display.
+.fade                       :it provides fading effect.
+.modal-title
+.modal-text
+.modal-dialog-scrollable
+
+Syntax:              <div class="modal">
+                       <div class="modal-dialog">
+                          <div class="modal-content">
+                             //modal section
+                         </div>
+                       </div>
+                     <div>
+
+.modal-sm
+.midal-lg        New classes for size
+
+Note: "modal-dialog" is mandatory for modals.
+       bootstrap 5 disabled nested modals.[modal-inside-modal]
+
+EX:
+ <body class="container-fluid">
+    <h2>Modals</h2>
+    <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#registerModal">Register</button>
+    <button class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#loginModal">Login</button>
+      <div class="modal fade" id="registerModal">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title">Register New User</h2>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <dl>
+                        <dt>User Name</dt>
+                        <dd><input type="text"></dd>
+                        <dt>Password</dt>
+                        <dd><input type="password"></dd>
+                        <dt>Email</dt>
+                        <dd><input type="email"></dd>
+                    </dl>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary">Register</button>
+                    <button class="btn btn-danger" data-bs-dismiss="modal">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="loginModal">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                       <h2>User Login</h2>
+                       <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>  
+                  <div class="modal-body">
+                     <dl>
+                        <dt>User Name</dt>
+                        <dd><input type="text"></dd>
+                        <dt>Password</dt>
+                        <dd><input type="password"></dd>
+                     </dl> 
+                  </div>   
+                      <div class="modal-footer">
+                              <button class="btn btn-primary">Login</button>
+                      </div>
+             </div>
+        </div>
+    </div>
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+
+                        Bootstrap Forms
+.form-control               textbox,password,data,email,url,number,textarea
+.form-select                <select> element
+.form-input-range           range input
+.form-range                 range input
+.form-label                 labels
+.form-control-label
+.form-switch                checkbox
+.form-check                 checkbox and radio
+.form-check-input           checkbox and radio
+.form-check-label           label for check box and radio
+
+EX:
+
+<body class="container-fluid">
+    <div class="d-flex justify-content-center align-items-center" style="height:500px">
+    <div>
+       <h2>Register User</h2>
+       <div class="mb-2">
+        <label class="form-label" for="UserName">User Name</label>
+        <div>
+            <input type="text" name="UserName" class="form-control">
+        </div>
+        <div class="mb-2">
+            <label class="form-label" for="Password">Password</label>
+            <div>
+                <input type="Password" name="Password" class="form-control">
+            </div>
+        </div>
+        <div class="mb-2">
+             <label for="City" class="form-label">Choose City</label>
+             <div>
+                <select name="City" id="" class="form-select">
+                    <option value="">Select Your City</option>
+                    <option value="">Delhi</option>
+                    <option value="">Odisha</option>
+                </select>
+             </div>
+        </div>
+        <div class="mb-2">
+            <label class="form-label" for="subscribe">You want subscription</label>
+            <div class="form-switch">
+                <input type="checkbox" class="form-check-input" name="subscribe"><label class="form-check-label">Yes</label>
+            </div>
+        </div>
+        <div class="mb-2">
+                  <label class="form-label" for="age">Select Age</label>
+                  <div>
+                    <input type="range"name="age" class="form-range">
+                  </div>
+        </div>
+        <div class="mb-2">
+            <button class="btn btn-primary w-100">Register</button>
+        </div>
+       </div>
+    </div>
+
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+
+                                    Bootstrap  Input Group
+.input-group[lg]
+.input-group-text
+.input-group-append        ]4.0 removed from bootstrap 5
+.input-group-prepend       ]
+
+
+syntax:
+  <div class="input-group">
+      <input type="text" class="form-control">
+          <span class="input-group-text">@gmail.com</span>
+ <div>
+
+EX:
+<body class="container-fluid">
+    <h2>Amazon Search Bar</h2>
+    <div class="input-group">
+        <select name="" id="" class="input-group-text">
+            <option value="">All</option>
+            <option value="">Mobile</option>
+        </select>
+        <input type="text" class="form-control">
+        <button class="btn btn-warning">
+            <span class="bi bi-search"></span>
+        </button>
+    </div>
+    <h2>Input group Append</h2>
+    <div class="input-group">
+        <input type="text" class="form-control">
+        <span class="input-group-text">@gmail.com</span>
+        <h2>Append and Prepend</h2>
+        <div class="input-group">
+            <span class="input-group-text">&#8377;</span>
+            <input type="text" class="form-control">
+            <span class="input-group-text">.00</span>
+        </div>
+    </div>
+    <h2>Center</h2>
+    <div class="input-group">
+        <input type="text" class="form-control">
+        <span class="input-group-text">@</span>
+        <input type="text" class="form-control">
+    </div>
+</body>
+
+EX:
+ <div class="mb-2">
+        <label class="form-label" for="UserName">User Name</label>
+        <div class="input-group">
+            <span class="bi bi-person input-group-text"></span>
+            <input type="text" name="UserName" class="form-control">
+            <span class="bi bi-check-circle input-group-text"></span>
+        </div>
+        <div class="mb-2">
+            <label class="form-label" for="Password">Password</label>
+            <div class="input-group">
+                <span class="bi bi-key-fill input-group-text"></span>
+                <input type="Password" name="Password" class="form-control">
+                <span class="bi bi-check-circle input-group-text"></span>
+            </div>
+        </div>
+</div>
+                       Bootstrap Collapse
+.collapse
+.collapsable
+
+Note: it allows to show or hide content dynamically.
+syntax:
+ <button data-bs-toggle="collapse" data-bs-target="id">
+     <div class="collapse show" id=" ">
+     your content
+   </div>
+EX:
+ <h2>Collapse Demo</h2>
+      <button data-bs-toggle="collapse" data-bs-target="#preview">Preview Show / Hide </button>
+      <div class="collapse show" id="preview">
+           <img src="../public/images/laptop.png" width="200" height="200" alt="">
+     </div>
+
+                              Bootstrap Accordion
+-it provides vertically collapsing accordion like containers.
+-Bootstrap 5 internally uses collapse fpr accordion.
+
+.accordion
+.accordion-item
+.accordion-header
+.accordion-body
+.accordion-button
+.accordion-collapse
+
+NOTE: The class "accordion-collapse" defines collapse behaviour for accordion items.
+      In bootstrap 4 we have to define it explicitly by using "collapse" component.
+   You have to define collapse class for accordion-body.
+jQuery Attributes:
+data-bs-parent     -it specifies the parent accordion id and it is defined for accordion body.
+                   -if parent is not defined ,then it will collapse every item individually.
+
+syntax:
+  <div class="accordion" id="parent">
+     <div class="accordion-item">
+        <div class="accordion-header">
+                 <h2 class="accordion-button>Topic-1</h2>
+       </div>
+    <div class="accordion-body accordion-collapse collapse show" 
+                     id="topic1" data-bs-parent="#parent">
+          your content
+    <div>
+  </div>
+<div>
+
+EX:
+ <body class="container-fluid">
+      <h2>Accordion</h2>
+      <div class="accordion" id="topics">
+           <div class="accordion-item">
+               <div class="accordion-header">
+                  <button class=" btn btn-danger w-100" data-bs-toggle="collapse" data-bs-target="#css">
+                    <h3>CSS Tutorial</h3>
+                  </button>
+               </div>
+               <div id="css" data-bs-parent="#topics" class="accordion-body accordion-collapse collapse show">
+                 <p>Something about Lorem ipsum dolor, sit amet consectetur adipicidunt totam</p>
+               </div>
+           </div>
+           <div class="accordion-item">
+            <div class="accordion-header">
+                <button class="btn btn-outline-success w-100" data-bs-toggle="collapse" data-bs-target="#html">
+                    <h3>HTML Tutorial</h3>
+                </button>
+            </div>
+            <div class="accordion-body accordion-collapse collapse " id="html" data-bs-parent="#topics">
+              <p>Something about HTML..</p>
+            </div>
+           </div>
+           <div class="accordion-item">
+            <div class="accordion-header">
+               <button class="btn btn-outline-primary w-100" data-bs-toggle="collapse" data-bs-target="#js" >
+                <h3>JavaScript Tutorial</h3>
+               </button>
+            </div>
+            <div class="accordion-body accordion-collapse collapse" id="js" data-bs-parent="#topics">
+              <p>Something about js..</p>
+            </div>
+           </div>
+      </div>
+ </body>
+
+                                Bootstrap Dropdown
+-form <select> defines a dropdown but will not allow icons and symbols.
+-it is good for controlling the items dynamically,like adding and removing items from list.
+-bootstrap dropdown can display items with icons and symbols but not good for dynamically 
+ adding and removing items.
+-hence use bootstrap dropdown only for navigation.
+
+Classes:
+.dropdown           down
+.droppup            up
+.dropend            right
+.dropstart          left
+.dropdown-item
+.dropdown-text
+.dropdown-link
+.dropdown-collapse
+.dropdown-menu
+
+Note:Collapse is internally defined in bootstrap-5.
+.dropdown-toggle   :it is used to show or hide collapse.
+                    [defined for dropdown button]
+
+syntax:
+   <div class="dropdown">
+        <button class="dropdown-toggle">Select</button>
+  <div class="dropdown-menu collapse">
+   <div class="dropdown-items>
+        //your items
+  </div>
+ </div>
+</div>
+
+EX:
+     <h2>Dropdown</h2>
+             <div class="dropdown">
+                <button class="dropdown-toggle" data-bs-toggle="dropdown">
+                    <span class="bi bi-globe"></span>Language
+                </button>
+                 <div class="dropdown-menu collapse" id="items">
+                     <div class="dropdown-item">
+                        <span class="bi bi-graph-down"></span>English
+                     </div>
+                     <div class="dropdown-item">
+                        Hindi
+                     </div>
+                     <div class="dropdown-item">
+                       Odia
+                     </div>
+                      <div class="dropdown-divider"></div>
+                    <div class="dropdown-item">
+                         <a href="#">Help?</a>
+                    </div>
+                 </div>
+             </div>
+
+Note:
+-The items in dropdown can be defined active or disabled by using the classes
+ .active
+ .disabled
+
+ <div class="dropdown-items active"></div>
+
+45:Netflix home page
+
+46:==================:46
+------------------------
+                                    Bootstrap Carousel
+-it is used for sliding and fading banners.
+
+Classes:
+--------
+.carousel
+.carousel-inner
+.carousel-item
+.carousel-indicators
+.carousel-control-previous-icon  ]buttons
+.carousel-control-next-icon      ]
+.carousel-dark
+.carousel-fade
+.carousel-control-next       ]
+.carousel-control-previous   ]buttons
+
+jQuery Attributes:
+data-bs-ride
+data-bs-slide
+data-bs-slide-to-number
+data-bs-touch
+data-bs-interval
+
+Basic Carousel Rules:
+---------------------
+1.Any one carousel item must be in active state.
+       <div class="carousel-item active">
+
+2.By default carousel will not start its animation.you have to configure jQuery attribute "data-bs-ride".
+       <div class="carousel" data-bs-ride="carousel">
+
+3.Carousel must have "slide or fade" effect defined.
+       <div class="carousel slide">
+       <div class="carousel fade carousel-fade">
+          bootstrap-4  fade
+          bootstrap-5  carousel-fade
+
+4.Carousel indicators requires active class.
+       <button data-bs-slide-to="1" class="active" data-bs-target="#" ></button>
+
+5.You can set timing for every carousel item individually.
+        "data-bs-interval=2000"
+             1000 mili seconds = 1sec
+       <div class="carousel-item" data-bs-interval="3000">
+
+6.Bootstrap introduced dark mode for carousel.
+         "carousel-dark"
+    <div class="carousel" carousel-dark">
+
+EX:
+      <div class="carousel  carousel-dark slide  mt-2" data-bs-ride="carousel" id="banner">
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="2000">
+                <img src="../public/images/carousal1.png"  class="w-100  d-block"alt="">
+            </div>
+            <div class="carousel-item" data-bs-interval="1000">
+                <img src="../public/images/carousal2.png"  class="w-100  d-block"alt="">
+            </div>
+            <div class="carousel-item" data-bs-interval="4000">
+                <img src="../public/images/carousal3.png"  class="w-100  d-block"alt="">
+            </div>
+            <button class="carousel-control-prev" data-bs-slide="prev" data-bs-target="#banner">
+               <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" data-bs-slide="next" data-bs-target="#banner">
+               <span class="carousel-control-next-icon"></span>
+            </button>
+            <div class="carousel-indicators">
+                <button data-bs-target="#banner" data-bs-slide-to="0" class="active"></button>
+                <button data-bs-target="#banner" data-bs-slide-to="1"></button>
+                <button data-bs-target="#banner" data-bs-slide-to="2"></button>
+            </div>
+        </div>
+    </div>
+
+                                     Bootstrap-images
+.img-fluid
+.img-thumbnail
+
+            <img src="" class="img-fluid img-thumbnail">
+EX:  <img src="../public/images/laptop.png" class="img-thumbnail img-fluid border border-3 border-primary" alt="">
+                                      
+                                      Bootstrap Tables
+.table
+.table-hover
+.table-bordered
+.table-stripped
+.table-dark
+.table-responsive
+.caption-top
+
+Note: Colors are defined with "bg-contextual"
+         Bootstrap 5 changed its responsive table style.
+      <div class="table-responsive">
+          <table class="table">
+      
+         </table>
+      </div>
+    Bootstrap 4 uses responsive for table element
+       <table class="table table-responsive">
+      </table>
+
+EX:
+    <div class="table-responsive">
+    <table class="table table-hover table-striped caption-top">
+        <caption>Products List</caption>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Stock</th>
+                
+                <th>Name</th>
+                <th>Price</th>
+                <th>Stock</th>
+          </thead>
+      </table>
+   </div>
+
+                                  Bootstrap Badge
+.badge
+.badge-pill           [using border and rounded]
+.badge-primary,danger [using bg-color]
+
+syntax:
+        <button>
+           <span class="badge bg-dark rounded rounded-circle">4</span>
+          Notifications
+       </button>
+
+EX:
+<h2>Badge</h2>
+      <button class="btn btn-primary">
+        <span class="bi bi-bell"></span>
+        
+        <span>Notifications</span>
+        <span class="badge bg-dark rounded rounded-circle ">5</span>
+      </button>
+                   Bootstrap Spinners
+.spinner-border[sm]
+.spinner-grow[sm]
+
+syntax:  <span class="spinner-border spinner-border-sm"></span>
+Note:colors are defined with "text-contextual"
+EX:
+   <h2>badge</h2>
+    <button class="btn btn-primary">
+        <span class="spinner-grow spinner-grow-sm">
+      
+        </span>   Loading...
+    </button>
+    <span class="spinner-border text-danger">Load</span>
+
+47:---------------------:47
+===========================
+                                  Bootstrap Progress
+-HTML progress is defined with <progress> element.
+-Bootstrap progress allows labels and content inside.
+
+.progress       :it is a collection of progress bars.
+.progress-bar   :it is used to configure a progress bar.
+                 The value for progress bar is defined with "width" attribute using style.
+             <div class="progress-bar" style="width: 40%"></div>
+          The color for progress bar is defined with bg-contextual.
+             <div class="progress-bar bg-danger" style="width: 40%">
+.progress-bar-striped
+.progress-bar-animated
+syntax:
+  <div class="progress">
+     <div class="progress-bar progress-bar-striped progress-bar-animated">
+    </div>
+ </div>
+EX:
+   <h3>html Progress</h3>
+    <progress min="1" max="100" value="40"></progress>
+    <h3>Bootstrap Progress</h3>
+    <div class="progress">
+         <div class="progress-bar progress-bar-striped bg-success" style="width: 40%;">
+              40% Completed
+         </div>
+         <div class="progress-bar progress-bar-animated progress-bar-striped bg-warning" style="width: 60%;">
+               60% remaining
+         </div>
+    </div>
+
+                                  Pagination
+.pagination
+.page-item
+.page-link
+.pagination-lg
+.pagination-sm
+
+Syntax:
+     <ul class="pagination">
+         <li class="page-item"><a href="#" class="page-link">1</a></li>
+    </ul>
+EX:
+     <h2>Products Table</h2>
+      <table class="table table-hover">
+          <thead>
+            <tr>
+                <th>Name</th>
+                <th>Price</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+                <td>TV</td>
+                <td>6400</td>
+            </tr>
+            <tr>
+                <td>TV</td>
+                <td>6400</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+                <td colspan="2">
+                    <ul class="pagination pagination-sm">
+                        <li class="page-item"><a class="page-link" href="#">&laquo;</a></li>
+                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item"><a class="page-link" href="#">4</a></li>
+                        <li class="page-item"><a class="page-link" href="#">&raquo;</a></li>
+                    </ul>
+                </td>
+            </tr>
+          </tfoot>
+      </table>
+
+                                         Bootstrap Nav
+-Static navigation bar with collection of items and combination of tabcontent.
+
+.nav
+.nav-pills
+.nav-fill
+.nav-item
+.nav-link
+.tabcontent
+.tab-pane
+
+Note:The target for button and hyperlink will change in jQuery.
+    :Button uses click to toggle
+    :Link uses href to toggle
+
+EX:  <button onclick="alert('Inserted')">Insert</button>
+     <a href="javascript:alert('Deleted')">Delete</a>
+
+    :Anchor element doesn't require "target".
+     <a href="#target" data-bs-toggle="component">
+
+    :Bootstrap 5 prefers using button for handling click instead of anchors.
+
+EX:  <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#registerModal">
+                    Register</button>
+     <a href="#loginModal" data-bs-toggle="modal">Login</a>
+
+Syntax: Nav with tabs
+
+   <ul class="nav nav-tabs">
+      <li class="nav-item active">
+          <button class="nav-link" data-bs-toggle="tab" data-bs-target="#preview"></button>
+      </li>
+  </ul>
+ <div class="tab-content">
+   <div class="tab-pane active show fade" id="preview">
+        your content.....
+   </div>
+ </div>
+
+EX:<h2>Product Info</h2>
+    <ul class="nav nav-tabs">
+      <li class="nav-item active">
+        <button data-bs-toggle="tab" data-bs-targe="#basic" class="nav-link">
+          Basic Details
+        </button>
+      </li>
+      <li class="nav-item">
+        <button data-bs-toggle="tab" data-bs-targe="#preview" class="nav-link">
+          Preview
+        </button>
+      </li>
+      <li class="nav-item">
+        <button
+          data-bs-toggle="tab"
+          data-bs-targe="#description"
+          class="nav-link"
+        >
+          Description
+        </button>
+      </li>
+    </ul>
+    <div class="tab-content">
+      <div class="tab-pane show fade active" id="basic">
+        <h2>Basic Details</h2>
+        <dl>
+          <dt>Name</dt>
+          <dd>Boat NeckBand</dd>
+          <dt>Price</dt>
+          <dd>4599</dd>
+        </dl>
+      </div>
+      <div class="tab-pane show fade" id="preview">
+        <h2>Preview</h2>
+        <dl>
+          <img
+            src="../public/images/carousal1.png"
+            width="200"
+            height="200"
+            alt=""
+          />
+        </dl>
+      </div>
+      <div class="tab-pane" id="description">
+        <h2>Description</h2>
+        <p>
+          Lorem ipsum dolor Repellat magnam minus eligendi provident rem
+          cupiditate neque perferendis est perspiciatis molestiae?
+        </p>
+      </div>
+    </div>
+48:::---------------:::48
+=========================
+                               Dynamic Navigation Bar
+-it is responsive navigation bar with collapseable menu.
+.navbar
+.navbar-expand
+.navbar-expand-lg
+.navbar-brand
+.navbar-toggle
+.navbar-toggler-icon
+.navbar-nav
+.navbar-collapse
+.bg-dark,bg-light   [themes for navigation]
+.navbar-dark        ]
+.navbar-light       ]dark and light themes for contextual colors
+
+Note:Navbar toggler uses collapse for navbar to show or hide the toggler button and also the menu items.
+    :it requires the attributes
+           data-bs-target=menuid
+           data-bs-toggle=collapse
+    :it uses predefined media queries to show or hide the toggler,hence u have to define 
+     in "container-fluid".
+
+syntax:
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark>
+     <div class="container-fluid">
+       <a class="navbar-brand">...</a>
+       <button class="navbar-toggler">
+            <span class="navbar-toggler-icon></span>
+       </button>
+           <div class="collapse navbar-collapse" id="menu">
+             <ul class=navbar-nav>
+                 <li class="nav-item><a class="nav-link">Home</a></li>
+            </ul>
+          </div>
+   </div>
+ </nav>
+
+EX:
+    <style>
+        iframe {
+            border: none;
+            height: 700px;
+        }
+    </style>
+   
+     <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+         <div class="container-fluid">
+            <button class="navbar-toggler" data-bs-target="#menulist" data-bs-toggle="collapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="#">
+                <span class="bi bi-cart4"></span>Amazon
+            </a>
+            
+          <div class="collapse navbar-collapse" id="menulist">
+           <div class="d-flex justify-content-between">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                 <a class="nav-link" target="frameBody" href="44accordion.html">Home</a>
+                </li>
+                <li class="nav-item">
+                 <a class="nav-link" target="frameBody" href="44InputGroup.html">About</a>
+                </li>
+                <li class="nav-item">
+                 <a class="nav-link" href="43formsBootstrap.html">Contact</a>
+                </li>
+
+            </ul>
+            <div>
+                <form action="" class="input-group">
+                    <input type="text" class="form-control">
+                    <button class="btn btn-warning">Search</button>
+                </form>
+            </div>
+           </div>
+          </div>
+         </div>
+      </nav>
+      <section class="mt-2">
+        <iframe src="44accordion.html" name="frameBody" frameborder="0" width="100%">
+
+        </iframe>
+      </section>
+ 
+
+
+
+
+
+
+
+
+
