@@ -10,7 +10,7 @@
 
 - 🔭 I’m currently working on **My project**
 
-- 🌱 I’m currently learning **Spring, springboot**
+- 🌱 I’m currently learning **.NET MVC, CORE**
 
 - 👯 I’m looking to collaborate on **New things**
 
