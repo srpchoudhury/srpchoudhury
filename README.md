@@ -25,7 +25,7 @@ Discord     :   ...
 <p align="left">
      &nbsp;&nbsp;  
   <img alt=" #4c2f1f " src="http://placehold.jp/4c2f1f/000000/20x20.jpg?text=%20"/><img alt="#f99e2f " src="http://placehold.jp/f99e2f/000000/20x20.jpg?text=%20" width="25" height="20" /><img alt="#ffcb6b " src="http://placehold.jp/ffcb6b/000000/20x20.jpg?text=%20" width="25" height="20" /><img alt="#ffdbca " src="http://placehold.jp/ffdbca/000000/20x20.jpg?text=%20" width="25" height="20" /><img alt="#fbedf6 " src="http://placehold.jp/fbedf6/000000/20x20.jpg?text=%20" width="25" height="20" />
-     <a href="https://kaustubhxd.github.io" target="_blank"><img alt="https://srpchoudhury.github.io" width="22px" src="https://github.com/Aakarsh-B/trying-repos/blob/master/www.svg" /></a>
+     <a href="https://srpchoudhury.github.io" target="_blank"><img alt="https://srpchoudhury.github.io" width="22px" src="https://github.com/Aakarsh-B/trying-repos/blob/master/www.svg" /></a>
      <a href="https://linkedin.com/in/srpchoudhury" target="_blank"><img alt="srpchoudhury  | LinkedIn" width="22px" src="https://github.com/Aakarsh-B/trying-repos/blob/master/linkedin.svg" /></a>
 </p>
 <br/>
