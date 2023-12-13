@@ -15,10 +15,10 @@
 ```csharp
 / kaustubhxd
 -------------------------
-Name        :   Kaustubh
-Portfolio   :   kaustubh.app
-Location    :   Pune, India
-Frameworks  :   React, Vue, Svelte, Express, Flutter
+Name        :   S Rudra Prasad Choudhury
+Portfolio   :   srpchoudhury
+Location    :   Odisha, India
+Frameworks  :   .NET Core, MVC, Angular, SQL Server, >NETWeb API
 Databases   :   MySQL, PostgreSQL, MongoDB        
 Languages   :   TypeScript, JavaScript, C++, Python, Java
 Learning    :   Three.js
