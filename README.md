@@ -1,7 +1,3 @@
-
-<h1 align="center" style="color: pink">Hi 👋, I'm S Rudra Prasad Choudhury</h1>
-<h3 align="center">A passionate Backend developer from India</h3>
-
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=srpchoudhury&label=Profile%20views&color=0e75b6&style=flat" alt="srpchoudhury" /> </p>
 
 #### ```Scroll down to check out my pinned projects :)```
@@ -18,13 +14,13 @@
 Name        :   S Rudra Prasad Choudhury
 Portfolio   :   srpchoudhury
 Location    :   Odisha, India
-Frameworks  :   .NET Core, MVC, Angular, SQL Server, >NETWeb API
-Databases   :   MySQL, PostgreSQL, MongoDB        
-Languages   :   TypeScript, JavaScript, C++, Python, Java
-Learning    :   Three.js
-Certs       :   Azure AZ-900
-Hobbies     :   Drawing, Skateboarding, Video Games
-Discord     :   critiKaL#5603
+Frameworks  :   .NET Core, MVC, Angular
+Databases   :   Sql Server, MySQL, Oracle DB     
+Languages   :   TypeScript, JavaScript, java, C#
+Learning    :   .NET Core
+Certs       :   ...
+Hobbies     :   Playing Cricket
+Discord     :   
 ```
 <p align="left">
      &nbsp;&nbsp;  
