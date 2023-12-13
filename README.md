@@ -20,7 +20,7 @@ Languages   :   TypeScript, JavaScript, java, C#
 Learning    :   .NET Core
 Certs       :   ...
 Hobbies     :   Playing Cricket
-Discord     :   
+Discord     :   ...
 ```
 <p align="left">
      &nbsp;&nbsp;  
@@ -32,8 +32,8 @@ Discord     :
 <br/>
 <br/>
 
-<!-- [![Kaustubh's github stats](https://github-readme-stats.vercel.app/api?username=kaustubhxd&include_all_commits=true&count_private=true&show_icons=true&line_height=20&title_color=FFFFFF&icon_color=FFFFFF&text_color=FFFFFF&bg_color=0D1117)](https://github.com/anuraghazra/github-readme-stats) -->
- <!-- [![Kaustubh's github stats](https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=kaustubhxd&hide=jupyter%20notebook&layout=compact&include_all_commits=true&count_private=true&show_icons=true&line_height=20&title_color=FFFFFF&icon_color=FFFFFF&text_color=FFFFFF&bg_color=0D1117)](https://github.com/anuraghazra/github-readme-stats) -->
+<!-- [![srpchoudhury's github stats](https://github-readme-stats.vercel.app/api?username=srpchoudhuryxd&include_all_commits=true&count_private=true&show_icons=true&line_height=20&title_color=FFFFFF&icon_color=FFFFFF&text_color=FFFFFF&bg_color=0D1117)](https://github.com/anuraghazra/github-readme-stats) -->
+ <!-- [![srpchoudhury's github stats](https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=srpchoudhuryxd&hide=jupyter%20notebook&layout=compact&include_all_commits=true&count_private=true&show_icons=true&line_height=20&title_color=FFFFFF&icon_color=FFFFFF&text_color=FFFFFF&bg_color=0D1117)](https://github.com/anuraghazra/github-readme-stats) -->
  
 <span>
 <img height="150em" src="https://github-readme-stats-sigma-five.vercel.app/api?username=kaustubhxd&include_all_commits=true&count_private=true&show_icons=true&line_height=20&title_color=FFFFFF&icon_color=FFFFFF&text_color=FFFFFF&bg_color=0D1117"/>
