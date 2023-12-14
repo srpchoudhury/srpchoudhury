@@ -1,4 +1,4 @@
-<!--<p align="left"> <img src="https://komarev.com/ghpvc/?username=srpchoudhury&label=Profile%20views&color=0e75b6&style=flat" alt="srpchoudhury" /> </p> -->
+<p align="left"> <img src="https://komarev.com/ghpvc/?username=srpchoudhury&label=Profile%20views&color=0e75b6&style=flat" alt="srpchoudhury" /> </p> 
 
 #### ```Scroll down to check out my pinned projects :)```
 ```zsh
